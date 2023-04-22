@@ -1,7 +1,3 @@
-"""
-Here we are going to create a class for the ball.
-"""
-
 import pygame
 import random
 

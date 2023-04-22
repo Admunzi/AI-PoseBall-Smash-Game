@@ -1,5 +1,4 @@
 import pygame
-import emoji
 
 pygame.init()
 
@@ -48,8 +47,7 @@ class GameGraphics:
 
     def display_game_screen(self, score, timer, difficulty):
         self.screen_game.fill((255, 255, 255))  # Fill the screen with white color
-        difficulty_text = GameGraphics.FONT_NORMAL.render(emoji.emojize(f"{difficulty.capitalize()} :ogre:"), True,
-                                                          (243, 65, 44))
+        difficulty_text = GameGraphics.FONT_NORMAL.render(f"{difficulty.capitalize()}", True, (243, 65, 44))
         self.screen_game.blit(difficulty_text, (self.screen_width / 2 - 30, 20))
         pygame.display.flip()
 

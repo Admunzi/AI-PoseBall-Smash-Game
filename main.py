@@ -1,21 +1,4 @@
-"""
-Game with Pose
-
-This game show pose landmarks on webcam and in the screen is going to be a game where you have to hit the balls with all
-the body parts that you can see in the screen.
-
-It uses the mediapipe library to show the pose landmarks on webcam and pygame to show the game.
-
-At the beginning it show a menu with different levels of difficulty, the first one is the easiest and the last one
-is the hardest. There are 3 levels of difficulty. (Easy, Medium, Hard)
-
-author: Daniel Ayala Cantador
-"""
-
-import sys
-import pygame
-import cv2
-
+import sys, pygame, cv2
 import pose_detection
 from game_graphics import GameGraphics, check_difficulty_selection, draw_balls
 from ball import Ball
@@ -45,15 +28,6 @@ def principal_menu():
     start_game()
 
 
-def handle_events():
-    for event in pygame.event.get():
-        # Check if the user clicked the close button
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
-        print("event.type: ", event.type)
-
-
 def initialize_game_variables(difficulty):
     GAME_MANAGER.set_difficulty(difficulty)
     GAME_MANAGER.set_balls(difficulty)
@@ -61,7 +35,6 @@ def initialize_game_variables(difficulty):
 
 
 def start_game():
-    # handle_events()  TODO: Fix this
     balls_list = []
     timer = Timer()
     next_ball_time = 0
@@ -117,7 +90,7 @@ def check_all_balls_hit(balls_list):
     if len(balls_list) == 0 and GAME_MANAGER.get_remaining_balls() == 0:
         GAME_GRAPHICS.display_game_finish_screen(SCORE_MANAGER.get_score())
         # wait 2 seconds before going back to menu
-        pygame.time.delay(20000)
+        pygame.time.delay(10000)
         principal_menu()
 
 
