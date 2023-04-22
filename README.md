@@ -15,6 +15,5 @@ is the hardest. There are 3 levels of difficulty. (Easy, Medium, Hard)
 
 # Video Demo
 
-<video width="320" height="240" controls>
-  <source src="media/video.mp4" type="video/mp4">
-</video>
+https://user-images.githubusercontent.com/72613258/233777231-460b738c-aa13-4b6c-a4a1-99b5e5fa71b4.mp4
+
