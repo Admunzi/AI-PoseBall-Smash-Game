@@ -14,6 +14,7 @@ is the hardest. There are 3 levels of difficulty. (Easy, Medium, Hard)
 - Select the difficulty
 
 # Video Demo
+
 <video width="320" height="240" controls>
   <source src="media/video.mp4" type="video/mp4">
 </video>
